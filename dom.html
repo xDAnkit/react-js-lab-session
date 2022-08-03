@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  /**
+   * @description {Method to update dom element everytime}
+   *  change
+   */
+  function normalUpdate() {
+    const startTime = performance.now();
+
+    for (let i = 0; i < 1000000; i++) {
+      const element = document.createElement("p");
+      element.textContent = "Hello";
+
+      // Updating element everytime on change
+      document.body.appendChild(element);
+    }
+
+    const endTime = performance.now();
+    return endTime - startTime;
+  }
+
+  //console.log("Batch Update", normalUpdate()); // 69.89 MilliSeconds
+
+  /**
+   * @description {Method to update dom element in batch using parent div}
+   */
+  function batchUpdate() {
+    const startTime = performance.now();
+
+    // Create batch div container for capturing changes
+    const container = document.createElement("div");
+
+    for (let i = 0; i < 1000000; i++) {
+      const element = document.createElement("p");
+      element.textContent = "Hello";
+      container.appendChild(element);
+    }
+
+    // Mutating DOM as a batch update
+    document.body.appendChild(container);
+
+    const endTime = performance.now();
+    return endTime - startTime;
+  }
+
+  console.log("Batch Update", batchUpdate()); // 69.89 MilliSeconds
+</script>

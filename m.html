@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  async function foo() {
+    console.log("Start");
+    await bar();
+    console.log("End");
+  }
+
+  async function bar() {
+    return new Promise((reply, reject) => {
+      setTimeout(() => {
+        console.log("Inside Settime out");
+      }, 1000);
+    });
+  }
+
+  foo();
+</script>
