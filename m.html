@@ -5,12 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .list .item {
+        background-color: red;
+        padding: 12px;
+        margin: 25px;
+        cursor: pointer;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="list" onclick="handleClickElem(event)">
+      <div class="item">
+        <p>A</p>
+      </div>
+
+      <div class="item">
+        <p>A</p>
+      </div>
+      <div class="item">
+        <p>A</p>
+      </div>
+    </div>
+  </body>
 </html>
 
 <script>
-  async function foo() {
+  function handleClickElem(e) {
+    //console.log("L35:", e.target.className);
+    if (e.target.className === "list") {
+      //console.log("Inside List");
+      //e.stopPropogation();
+      return;
+    }
+    console.log("LN35: ", e.target);
+  }
+  /*   async function foo() {
     console.log("Start");
     await bar();
     console.log("End");
@@ -24,5 +54,42 @@
     });
   }
 
-  foo();
+  foo(); */
+
+  const profile = {
+    name: "Ankit",
+    city: "Morena",
+    contact: "9977092455",
+    githubHandle: "xDAnkit",
+    isActive: true,
+  };
+
+  // Spread op -> Creating a shallow copy
+  const profileCopy = { ...profile };
+  profileCopy.isActive = false;
+
+  // Rest Op
+  const { name, city, ...restData } = profile;
+
+  const functionMe = (...args) => {};
+
+  functionMe(1, 2, 3, 4, 5);
+  functionMe(1, 2);
+  functionMe(1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2);
+
+  async function callAPI(url, cb) {
+    const response = await fetch(url);
+    const parsedResponse = await response.json();
+    if (!parsedResponse) {
+      return;
+    }
+
+    cb(parsedResponse);
+  }
+
+  function handleAPIResponse(data) {
+    console.log(data);
+  }
+
+  callAPI("URL", handleAPIResponse);
 </script>
