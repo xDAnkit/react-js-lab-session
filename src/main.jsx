@@ -8,9 +8,11 @@ import NestedStateWithFC from "./Day-7/NestedStateWithFC";
 import MyTodo from "./Day-7/MyTodo";
 import Onboarding from "./Day-7/Onboarding";
 import CalculatorV5 from "./Day-8/Props";
+import LifecycleV1 from "./Day-9/Lifecycle";
+import LifecycleV3 from "./Day-9/Lifecycle/indexV3";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    <CalculatorV5 />
+    <LifecycleV3 />
   </>
 );
