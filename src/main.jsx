@@ -10,9 +10,11 @@ import Onboarding from "./Day-7/Onboarding";
 import CalculatorV5 from "./Day-8/Props";
 import LifecycleV1 from "./Day-9/Lifecycle";
 import LifecycleV3 from "./Day-9/Lifecycle/indexV3";
+import MeraCompV1 from "./Day-10/useEffect";
+import MyCompV3 from "./Day-10/useEffect/indexv3";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    <LifecycleV3 />
+    <MyCompV3 />
   </>
 );
