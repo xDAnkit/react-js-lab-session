@@ -13,9 +13,13 @@ import LifecycleV3 from "./Day-9/Lifecycle/indexV3";
 import MeraCompV1 from "./Day-10/useEffect";
 import MyCompV3 from "./Day-10/useEffect/indexv3";
 import Day11V1 from "./Day-11";
+import MemoV4 from "./Day-11/MemoV4";
+import UseMemoV1 from "./Day-12";
+import UseMemov2 from "./Day-12/indexV2";
+import UseMemov3 from "./Day-12/indexV3";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    <Day11V1 />
+    <UseMemov3 />
   </>
 );
