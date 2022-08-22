@@ -17,9 +17,12 @@ import MemoV4 from "./Day-11/MemoV4";
 import UseMemoV1 from "./Day-12";
 import UseMemov2 from "./Day-12/indexV2";
 import UseMemov3 from "./Day-12/indexV3";
+import UseCallbackV1 from "./Day-13";
+import UseCallbackV2 from "./Day-13/index-v2";
+import ParentCompV1 from "./Day-13/index-v3";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    <UseMemov3 />
+    <ParentCompV1 />
   </>
 );
