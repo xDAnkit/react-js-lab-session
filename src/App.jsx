@@ -1,3 +1,4 @@
+import { createContext } from "react";
 import AboutMe from "./Components/AboutMe";
 //import Home, { Home2 as VasiFile } from "./Home";
 import HomeFile, { Home2 } from "./Home";
@@ -9,18 +10,31 @@ import HomeFile, { Home2 } from "./Home";
 // Avoid using since it's loading the entire file
 //const HomeFile = require('./Home')
 
+import Day14HomeV1 from "./Day-14/indexv1";
+import Day14About from "./Day-14/indexv2";
+import { useState } from "react";
+
+// name Context
+export const nameContext = createContext("");
+const NameProvider = nameContext.Provider;
+export const NameConsumer = nameContext.Consumer;
+
+// City Context
+export const cityContext = createContext("");
+const CityProvider = cityContext.Provider;
+export const CityConsumer = cityContext.Consumer;
+
 function App() {
+  const [name, setName] = useState("Vasi");
   return (
     <>
-      <HomeFile.Home />
-      <HomeFile.Home2 />
-      <br />
-      <Home2 />
-      <div className=""></div>
-      <AboutMe />
-      <AboutMe />
-      <AboutMe />
-      <AboutMe />
+      <input value={name} onChange={(e) => setName(e.target.value)} />
+      <CityProvider value="Paris">
+        <NameProvider value={name}>
+          <Day14HomeV1 />
+          <Day14About />
+        </NameProvider>
+      </CityProvider>
     </>
   );
 }
