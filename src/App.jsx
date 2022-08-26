@@ -13,6 +13,7 @@ import HomeFile, { Home2 } from "./Home";
 import Day14HomeV1 from "./Day-14/indexv1";
 import Day14About from "./Day-14/indexv2";
 import { useState } from "react";
+import APICalling from "./Day-14/indexv6";
 
 // name Context
 export const nameContext = createContext("");
@@ -31,8 +32,7 @@ function App() {
       <input value={name} onChange={(e) => setName(e.target.value)} />
       <CityProvider value="Paris">
         <NameProvider value={name}>
-          <Day14HomeV1 />
-          <Day14About />
+          <APICalling />
         </NameProvider>
       </CityProvider>
     </>

@@ -22,11 +22,19 @@ import UseCallbackV2 from "./Day-13/index-v2";
 import ParentCompV1 from "./Day-13/index-v3";
 import Day13V4 from "./Day-13/index-v4";
 import App from "./App";
-
-console.log(<Day13V4 />);
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import NavigationV1Home from "./Day-15/index-v2";
+import NavigationV1About from "./Day-15/index-v1";
+import NavigationV1NotFound from "./Day-15/index-v3";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<NavigationV1Home />}></Route>
+        <Route path="/about" element={<NavigationV1About />}></Route>
+        <Route path="*" element={<NavigationV1NotFound />}></Route>
+      </Routes>
+    </BrowserRouter>
   </>
 );
