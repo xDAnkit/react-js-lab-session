@@ -30,18 +30,12 @@ import PathParamsV1 from "./Day-16";
 import PathParamsV2 from "./Day-16/index-v2";
 import Day17V1 from "./Day-17";
 import Day17V2 from "./Day-17/index-v2";
+import Navigation from "./Day-18/src/navigation";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Day17V1 />}></Route>
-        <Route path="/details" element={<Day17V2 />}></Route>
-        <Route path="/about" element={<NavigationV1About />}></Route>
-        <Route path="/path" element={<PathParamsV1 />} />
-        <Route path="/path/:superman/:power" element={<PathParamsV2 />} />
-        <Route path="*" element={<NavigationV1NotFound />}></Route>
-      </Routes>
+      <Navigation />
     </BrowserRouter>
   </>
 );
