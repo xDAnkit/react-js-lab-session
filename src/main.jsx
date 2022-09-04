@@ -31,11 +31,14 @@ import PathParamsV2 from "./Day-16/index-v2";
 import Day17V1 from "./Day-17";
 import Day17V2 from "./Day-17/index-v2";
 import Navigation from "./Day-18/src/navigation";
+import FirstComp from "./Day-Revision/FirstComp";
+import DayRevisionV2 from "./Day-Revision-2";
+import DayRevisionV2B from "./Day-Revision-2/index-v2";
+import DayRevisionV3 from "./Day-Revision-2/index-v3";
+import DayRevisionV4 from "./Day-Revision-2/index-v4";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    <BrowserRouter>
-      <Navigation />
-    </BrowserRouter>
+    <DayRevisionV4 />
   </>
 );
