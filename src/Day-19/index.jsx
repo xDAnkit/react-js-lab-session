@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { DECREMENT, INCREMENT } from "./action";
+import ReduxDay19V2 from "./index-v2";
 
 const ReduxDay2 = () => {
   const selector = useSelector((state) => {
@@ -22,6 +23,22 @@ const ReduxDay2 = () => {
       <p>Welcome to Redux {selector}</p>
       <button onClick={increment}>Increment</button>
       <button onClick={decrement}>Decrement</button>
+      <ReduxDay19V2 />
+      <ReduxDay19V2 />
+      <ReduxDay19V2 />
+      <ReduxDay19V2 />
+      <ReduxDay19V2 />
+      <ReduxDay19V2 />
+      <ReduxDay19V2 />
+      <ReduxDay19V2 />
+      <ReduxDay19V2 />
+      <ReduxDay19V2 />
+      <ReduxDay19V2 />
+      <ReduxDay19V2 />
+      <ReduxDay19V2 />
+      <ReduxDay19V2 />
+      <ReduxDay19V2 />
+      <ReduxDay19V2 />
     </>
   );
 };
