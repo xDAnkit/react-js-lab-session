@@ -36,9 +36,15 @@ import DayRevisionV2 from "./Day-Revision-2";
 import DayRevisionV2B from "./Day-Revision-2/index-v2";
 import DayRevisionV3 from "./Day-Revision-2/index-v3";
 import DayRevisionV4 from "./Day-Revision-2/index-v4";
+import CheckboxView from "./Day-Revision-2/checkbox";
+import ReduxDay2 from "./Day-19";
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    <DayRevisionV4 />
+    <Provider store={store}>
+      <ReduxDay2 />
+    </Provider>
   </>
 );
