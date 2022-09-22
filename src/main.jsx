@@ -40,11 +40,15 @@ import CheckboxView from "./Day-Revision-2/checkbox";
 import ReduxDay2 from "./Day-19";
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import ReactSignals from "./Day-Experiment";
+import Day20V1 from "./Day-20";
+import ErrorBoundExample from "./Day-Experiment/ErrorBoundries";
+import ErrorBoundaryComp from "./Day-Experiment/ErrorBoundries/ErrorBound";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    <Provider store={store}>
-      <ReduxDay2 />
-    </Provider>
+    <ErrorBoundaryComp>
+      <App />
+    </ErrorBoundaryComp>
   </>
 );
