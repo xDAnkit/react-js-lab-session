@@ -18,6 +18,7 @@ import APICalling from "./Day-14/indexv6";
 import DayRevisionV1 from "./Day-Practise-1";
 import { Provider } from "react-redux";
 import MeraSliceComponent from "./Day-21";
+import SagaCalculator from "./Day-22";
 
 // name Context
 export const nameContext = createContext("Tarun");
@@ -34,7 +35,7 @@ function App() {
   return (
     <>
       <Provider store={store}>
-        <MeraSliceComponent />
+        <SagaCalculator />
       </Provider>
     </>
   );
