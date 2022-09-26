@@ -8,8 +8,12 @@ const SagaCalculator = () => {
   const state = useSelector((state) => state.sagaCalculatorSlice);
   const dispatch = useDispatch();
 
+  console.log("@AJ Step 7 : Reducer state: ", state);
+
   const dispatchAddNumbers = () => {
+    console.log("@AJ Step 1 : Dispatching dispatchAddNumbers request");
     dispatch(add({ num1, num2 }));
+    console.log("@AJ Step 1.1 : Dispatching dispatchAddNumbers request done");
   };
   return (
     <>
