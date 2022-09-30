@@ -19,6 +19,7 @@ import DayRevisionV1 from "./Day-Practise-1";
 import { Provider } from "react-redux";
 import MeraSliceComponent from "./Day-21";
 import SagaCalculator from "./Day-22";
+import PocketSample from "./Day-Experiment/pocketbase";
 
 // name Context
 export const nameContext = createContext("Tarun");
@@ -35,7 +36,7 @@ function App() {
   return (
     <>
       <Provider store={store}>
-        <SagaCalculator />
+        <PocketSample />
       </Provider>
     </>
   );
