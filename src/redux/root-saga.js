@@ -2,5 +2,9 @@ import { all, fork } from "redux-saga/effects";
 import { watchAddNumberAction } from "../Day-22/saga";
 
 export default function* rootSaga() {
-  yield all([fork(watchAddNumberAction)]);
+  yield all([
+    fork(watchAddNumberAction),
+    /*  fork(watchAddNumberAction),
+    fork(watchAddNumberAction), */
+  ]);
 }
